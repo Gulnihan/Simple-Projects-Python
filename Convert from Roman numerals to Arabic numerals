@@ -1,0 +1,22 @@
+# Write code below 💖
+roman_numeral = input("Enter the roman numerals: ")
+arabic_number = 0
+
+# identify roman characters
+characters = {
+    "CM": 900, "CD": 400, "XC": 90, "XL": 40, "IX": 9, "IV": 4,
+    "M": 1000, "D": 500, "C": 100, "L": 50, "X": 10, "V": 5, "I": 1
+}
+
+# replace double character digits
+for key in ["CM", "CD", "XC", "XL", "IX", "IV"]:
+    if key in roman_numeral:
+        arabic_number += characters[key]
+        roman_numeral = roman_numeral.replace(key, "", 1)  # Her bulunduğunda bir kez değiştirin
+
+# replace single character digits
+for char in roman_numeral:
+    if char in characters:
+        arabic_number += characters[char]
+
+print(arabic_number)
