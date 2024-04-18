@@ -1,0 +1,51 @@
+# Write code below 💖
+first_question=input("Q1) Do you like Dawn or Dusk?\n1) Dawn\n2)Dusk\n").lower()
+second_question=input("Q2) When I’m dead, I want people to remember me as\n1) The Good\n2) The Great\n3) The Wise\n4) The Bold\n").lower()
+third_question=input("Q3) Which kind of instrument most pleases your ear?\n1) The violin\n2) The trumpet\n3) The piano\n4) The drum\n").lower()
+
+Gryffindor=0
+Ravenclaw=0
+Hufflepuff=0
+Slytherin=0
+
+if first_question=="dawn":
+  Gryffindor += 1
+  Ravenclaw += 1
+elif first_question=="dusk":
+  Hufflepuff += 1
+  Slytherin += 1
+else:
+  print("Wrong input.")
+
+if second_question=="the good":
+  Hufflepuff += 2
+elif second_question=="the great":
+  Slytherin += 2
+elif second_question=="the wise":
+  Ravenclaw += 2
+elif second_question=="the bold":
+  Gryffindor += 2
+else:
+  print("Wrong input.")
+
+if third_question=="the violin":
+  Hufflepuff += 4
+elif third_question=="the trumpet":
+  Slytherin += 4
+elif third_question=="the piano":
+  Ravenclaw += 4
+elif third_question=="the drum":
+  Gryffindor += 4
+else:
+  print("Wrong input.")
+
+max_score=max(Gryffindor, Ravenclaw, Hufflepuff, Slytherin)
+
+if max_score == Gryffindor:
+    print("Gryffindor")
+elif max_score == Ravenclaw:
+    print("Ravenclaw")
+elif max_score == Hufflepuff:
+    print("Hufflepuff")
+elif max_score == Slytherin:
+    print("Slytherin")
