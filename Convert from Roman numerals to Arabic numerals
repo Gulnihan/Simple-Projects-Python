@@ -12,7 +12,7 @@ characters = {
 for key in ["CM", "CD", "XC", "XL", "IX", "IV"]:
     if key in roman_numeral:
         arabic_number += characters[key]
-        roman_numeral = roman_numeral.replace(key, "", 1)  # Her bulunduğunda bir kez değiştirin
+        roman_numeral = roman_numeral.replace(key, "", 1) 
 
 # replace single character digits
 for char in roman_numeral:
